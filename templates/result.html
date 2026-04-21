@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <h2>Manual Entry</h2>
+        <p>Before Food: {{ before_food }} mg/dL</p>
+        <p>After Food: {{ after_food }} mg/dL</p>
+        <ul>
+            {% for r in result_manual %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+
+        <h2>From Uploaded Report</h2>
+        <pre>{{ raw_text }}</pre>
+        <ul>
+            {% for r in result_from_report %}<li>{{ r }}</li>{% endfor %}
+        </ul>
+
+        <a href="/">&#8592; Back</a>
+    </div>
+</body>
+</html>
