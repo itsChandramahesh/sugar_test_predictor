@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t myapp1 .'
+                sh 'docker build -t myapp .'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Run New Container') {
             steps {
-                sh 'docker run -d -p 5000:5000 --name myapp1 myapp1'
+                sh 'docker run -d -p 5000:5000 --name myapp myapp'
             }
         }
     }
